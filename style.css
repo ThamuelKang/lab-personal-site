@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Domine:wght@400..700&display=swap');
+
+
+/* global  */
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    color: #121212;
+    font-size: 16px;
+    font-family: "Cascadia Code", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 80px;
+    line-height: 140%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Domine', serif;
+    font-weight: bold;
+    line-height: 140%;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+a {
+    color: #121212;
+    font-weight: bold;
+}
+
+
+/* header */
+
+header {
+    height: 50vh;
+    padding: 80px;
+    background-color: #f1da71;
+    border: 1px solid #b1a533;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 4em;
+}
+
+header p {
+    font-size: 1.5em;
+    line-height: 140%;
+    text-align: center;
+
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 64px 0;
+}
+
+nav {
+    gap: 20px;
+    display: flex;
+}
+
+nav a {
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    opacity: .7;
+    transition: opacity 150ms ease-in-out;
+}
+
+
+
+
+/* project section */
+
+.projects {
+    padding: 80px 0;
+}
+
+.projects h2 {
+    text-align: center;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.projects h2 {
+    margin: 0 0 40px 0;
+}
+
+.card a {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 150ms ease-in-out;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+.project-info {
+    padding: 24px;
+}
+
+.project-info h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.project-info p {
+    font-weight: normal;
+}
+
+.card img {
+    width: 100%;
+}
+
+
+.card a:hover {
+    transform: translateY(-10px);
+
+}
+
+.card a:hover h3 {
+    text-decoration: underline;
+}
+
+
+/* about */
+
+.about {
+    padding: 80px;
+    background-color: #a1d27c;
+    border: 1px solid #7bb350;
+    border-radius: 12px;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.about-me img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.about-sam {
+    max-width: 500px;
+}
+
+.about-sam h2 {
+    margin: 0 0 20px 0;
+}
+
+.about-sam a {
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Domine', sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    background-color: rgb(11, 66, 41);
+    color: white;
+    border-radius: 12px;
+    margin: 24px 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+.about-sam a:hover {
+    opacity: .7;
+}
+
+
+/* responsive breakpoints */
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        font-size: 14px;
+        padding: 24px;
+    }
+
+    .project-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    body {
+        gap: 40px;
+    }
+
+    .projects {
+        padding: 0;
+    }
+
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 24px;
+    }
+
+    header {
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1.25em;
+    }
+
+
+    nav a {
+        font-size: 1.25em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    header h1 {
+        text-align: left;
+    }
+
+    header p {
+        text-align: left;
+    }
+
+    .header-info {
+        display: flex;
+        align-items: start;
+        margin: 0 0 24px 0;
+    }
+
+    header {
+        align-items: start;
+        gap: 24px;
+        padding: 40px 24px;
+        height: auto;
+    }
+}
